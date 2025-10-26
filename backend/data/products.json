@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Классическая белая рубашка",
+    "image": "https://via.placeholder.com/200x250/007bff/ffffff?text=Рубашка",
+    "price": "2990 ₽",
+    "category": "Рубашки",
+    "brand": "Classic Style",
+    "description": "Элегантная белая рубашка из хлопка"
+  },
+  {
+    "id": 2,
+    "name": "Джинсы скинни",
+    "image": "https://via.placeholder.com/200x250/28a745/ffffff?text=Джинсы",
+    "price": "4590 ₽",
+    "category": "Джинсы",
+    "brand": "Denim Co",
+    "description": "Удобные джинсы скинни из денима"
+  },
+  {
+    "id": 3,
+    "name": "Черное платье",
+    "image": "https://via.placeholder.com/200x250/6f42c1/ffffff?text=Платье",
+    "price": "5990 ₽",
+    "category": "Платья",
+    "brand": "Elegant",
+    "description": "Стильное черное платье для особых случаев"
+  },
+  {
+    "id": 4,
+    "name": "Кожаная куртка",
+    "image": "https://via.placeholder.com/200x250/dc3545/ffffff?text=Куртка",
+    "price": "12990 ₽",
+    "category": "Куртки",
+    "brand": "Leather Style",
+    "description": "Качественная кожаная куртка"
+  },
+  {
+    "id": 5,
+    "name": "Спортивные кроссовки",
+    "image": "https://via.placeholder.com/200x250/fd7e14/ffffff?text=Кроссовки",
+    "price": "7990 ₽",
+    "category": "Обувь",
+    "brand": "SportMax",
+    "description": "Удобные спортивные кроссовки"
+  },
+  {
+    "id": 6,
+    "name": "Элегантная блузка",
+    "image": "https://via.placeholder.com/200x250/20c997/ffffff?text=Блузка",
+    "price": "3490 ₽",
+    "category": "Блузки",
+    "brand": "Feminine",
+    "description": "Женственная элегантная блузка"
+  },
+  {
+    "id": 7,
+    "name": "Классические брюки",
+    "image": "https://via.placeholder.com/200x250/6c757d/ffffff?text=Брюки",
+    "price": "3990 ₽",
+    "category": "Брюки",
+    "brand": "Business",
+    "description": "Деловые классические брюки"
+  },
+  {
+    "id": 8,
+    "name": "Стильная юбка",
+    "image": "https://via.placeholder.com/200x250/e83e8c/ffffff?text=Юбка",
+    "price": "2790 ₽",
+    "category": "Юбки",
+    "brand": "Chic",
+    "description": "Модная стильная юбка"
+  }
+]

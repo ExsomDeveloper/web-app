@@ -1,0 +1,91 @@
+@import '../../../App.css';
+
+.home-screen {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(to bottom, #00e1ff, #0d5aff);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.nav-button {
+  border: none;
+  color: #000;
+  background: #fff;
+  border-radius: 15px;
+  padding: 16px 32px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.nav-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button.primary {
+  background: #007bff;
+  color: white;
+}
+
+.nav-button.primary:hover {
+  background: #0056b3;
+}
+
+.nav-button.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.nav-button.secondary:hover {
+  background: #545b62;
+}
+
+
