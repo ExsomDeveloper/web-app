@@ -15,6 +15,10 @@ backend/
 ├── schemas/             # Pydantic модели
 │   ├── __init__.py
 │   └── tryon.py         # Модели для tryon API
+├── services/            # Сервисы для внешних API
+│   ├── __init__.py
+│   ├── kling.py         # Сервис для Kling.ai
+│   └── README.md         # Документация сервисов
 ├── data/                # Данные
 │   └── products.json    # Список продуктов
 ├── uploads/             # Загруженные файлы
@@ -40,6 +44,7 @@ API endpoints для работы с продуктами:
 
 ### `routers/tryon.py`
 API endpoints для примерки одежды:
+- `GET /api/kling/token` - тестовый endpoint для получения токена Kling.ai
 - `POST /api/tryon` - обработка двух изображений в Base64
 - `POST /api/upload/photo` - загрузка фотографии
 - `POST /api/process/tryon` - обработка фотографий для примерки
@@ -47,6 +52,13 @@ API endpoints для примерки одежды:
 ### `schemas/tryon.py`
 Pydantic модели для валидации данных:
 - `TryOnRequest` - модель запроса для примерки
+
+### `services/kling.py`
+Сервис для работы с Kling.ai API:
+- `KlingService` - класс для генерации изображений
+- `generate_jwt_token()` - генерация JWT токена для авторизации
+- `get_authorization_header()` - получение заголовка Authorization
+- Подробнее см. `services/README.md`
 
 ## Запуск
 

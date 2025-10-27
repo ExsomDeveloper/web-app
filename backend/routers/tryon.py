@@ -6,6 +6,7 @@ import asyncio
 import shutil
 
 from schemas.tryon import TryOnRequest
+from services.kling import get_kling_service
 
 router = APIRouter(prefix="/api", tags=["tryon"])
 
@@ -15,6 +16,25 @@ PROFILE_PNG = Path("profile.png")
 # Папка для загруженных файлов
 UPLOAD_DIR = Path("uploads")
 UPLOAD_DIR.mkdir(exist_ok=True)
+
+
+@router.get("/kling/token")
+async def get_kling_token():
+    """
+    Тестовый endpoint для получения токена Kling.ai
+    """
+    try:
+        kling_service = get_kling_service()
+        token = kling_service.generate_jwt_token()
+        auth_header = kling_service.get_authorization_header()
+        
+        return JSONResponse({
+            "token": token,
+            "authorization_header": auth_header,
+            "api_domain": kling_service.get_base_url()
+        })
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка при генерации токена: {str(e)}")
 
 
 @router.post("/tryon")

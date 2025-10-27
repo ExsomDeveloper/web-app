@@ -20,3 +20,7 @@ CORS_ORIGINS = ["http://localhost:3000"]
 HOST = "0.0.0.0"
 PORT = 8000
 
+# Настройки Kling.ai API
+KLING_ACCESS_KEY = "AkFBemPhJ4LHfFJLL3aCTGKPaGPRNMEA"
+KLING_SECRET_KEY = "nykRgmfLAparCKF3Gg3nC3tmBkYrTftF"
+KLING_API_DOMAIN = "https://api-singapore.klingai.com"
