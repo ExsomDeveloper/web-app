@@ -117,7 +117,12 @@ export function TryOnePage({ onNavigateToHome }: TryOnePageProps) {
       const base64Photo1 = await fileToBase64(photo1);
       const base64Photo2 = await fileToBase64(photo2);
 
-      const response = await fetch('http://localhost:8000/api/tryon', {
+      // Автоматическое определение API URL
+      const API_URL = window.location.hostname === 'localhost' 
+        ? 'http://localhost:8000' 
+        : 'https://unslighted-complaisantly-erma.ngrok-free.dev';
+      
+      const response = await fetch(`${API_URL}/api/tryon`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

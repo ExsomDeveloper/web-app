@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
 from pathlib import Path
 import json
+from app.config import API_BASE_URL
 
 router = APIRouter(prefix="/api/products", tags=["products"])
 
@@ -20,6 +21,11 @@ async def get_products():
         
         with open(PRODUCTS_FILE, 'r', encoding='utf-8') as f:
             products = json.load(f)
+        
+        # Добавляем полные URL для изображений продуктов
+        for product in products:
+            if 'image' in product:
+                product['image_url'] = f"{API_BASE_URL}/static/products/{product['image']}"
         
         return JSONResponse({"products": products})
     
@@ -42,6 +48,10 @@ async def get_product(product_id: int):
         product = next((p for p in products if p['id'] == product_id), None)
         if not product:
             raise HTTPException(status_code=404, detail="Продукт не найден")
+        
+        # Добавляем полный URL для изображения продукта
+        if 'image' in product:
+            product['image_url'] = f"{API_BASE_URL}/static/products/{product['image']}"
         
         return JSONResponse({"product": product})
     
