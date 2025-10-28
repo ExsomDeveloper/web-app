@@ -2,6 +2,7 @@ import React, { useMemo, useRef, useState } from 'react';
 import { Tabs } from '../../../shared/ui/Tabs/Tabs';
 import { Button } from '../../../shared/ui/Button/Button';
 import { ImagePreview } from '../../../shared/ui/ImagePreview/ImagePreview';
+import { getApiUrl } from '../../../config/env';
 import './tryon.css';
 
 type ActiveTab = 'photo1' | 'photo2' | 'result';
@@ -117,10 +118,8 @@ export function TryOnePage({ onNavigateToHome }: TryOnePageProps) {
       const base64Photo1 = await fileToBase64(photo1);
       const base64Photo2 = await fileToBase64(photo2);
 
-      // Автоматическое определение API URL
-      const API_URL = window.location.hostname === 'localhost' 
-        ? 'http://localhost:8000' 
-        : 'https://unslighted-complaisantly-erma.ngrok-free.dev';
+      // Используем централизованную конфигурацию API URL
+      const API_URL = getApiUrl();
       
       const response = await fetch(`${API_URL}/api/tryon`, {
         method: 'POST',
